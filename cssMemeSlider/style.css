@@ -53,7 +53,6 @@ html {
 
 .container-wrapper {
 	padding: 1.25rem;
-
 }
 
 .container {
@@ -119,7 +118,7 @@ label:hover {
 
 .memo {
 	/* position: relative; */
-	max-width: calc(100vw-2.5rem);
+	max-width: 100%;
 	display: flex;
 	transition: .3s;
 }
@@ -138,7 +137,8 @@ label:hover {
 }
 
 img {
-	object-fit: cover;
+	max-width: 100%;
+	object-fit: none;
 }
 
 /* .wrapper .box:nth-child(1) {
@@ -165,7 +165,7 @@ img {
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
-	object-fit: cover;
+	/* object-fit: cover; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -175,7 +175,7 @@ img {
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
-	object-fit: cover;
+	/* object-fit: cover; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -185,7 +185,7 @@ img {
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
-	object-fit: cover;
+	/* object-fit: cover; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -195,7 +195,7 @@ img {
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
-	object-fit: cover;
+	/* object-fit: cover; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
