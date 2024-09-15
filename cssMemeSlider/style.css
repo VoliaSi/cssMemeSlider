@@ -1,0 +1,216 @@
+/* :root {
+	--color-light-xl: #fff;
+	--color-light-l: #f6f6f6;
+	--color-light-s: #fafafa;
+	--color-dark-s: #cdcdcd;
+	--color-dark-m: #b2b2b2;
+	--color-dark-l: #545454;
+	--color-dark-xl: #4c4c4c;
+	--color-dark-2xl: #444;
+	--color-dark-3xl: #292929;
+	--color-primary: #f1cdb3;
+	--color-primary-light: #fddcc4;
+	--start-screen-gradient-background: #211f20;
+	--footer-gradient-background: #211f20;
+	--content-width: 1200px;
+	--tablet-width: 768px;
+	--mobile-big-width: 414px;
+	--mobile-small-width: 320px;
+}
+
+@font-face {
+	font-family: "Georgia";
+	font-style: normal;
+	src: url(../../fonts/georgia/georgia-regular.ttf);
+}
+
+@font-face {
+	font-family: "Arial-narrow";
+	font-style: normal;
+	src: url(../../fonts/arial/arial-narrow.ttf);
+}*/
+
+@font-face {
+	font-family: "Arial";
+	font-style: normal;
+	src: url(../../fonts/arial/arial.ttf);
+}
+
+html {
+	letter-spacing: 4px;
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.page {
+	width: 100vw;
+	height: 100vh;
+	background: rgb(160, 223, 244);
+}
+
+.container-wrapper {
+	padding: 20px;
+}
+
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.switch input {
+	display: none;
+}
+
+.controls {
+	/* position: absolute; */
+	/* bottom: 40px;
+	left: 50%; */
+	/* transform: translateX(-50%); */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	z-index: 100;
+}
+
+.controls label {
+	width: 20px;
+	height: 20px;
+	background: blue;
+	border-radius: 20px;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: .5s;
+}
+
+.switch input:nth-child(1):checked~.controls label:nth-child(1),
+.switch input:nth-child(2):checked~.controls label:nth-child(2),
+.switch input:nth-child(3):checked~.controls label:nth-child(3),
+.switch input:nth-child(4):checked~.controls label:nth-child(4) {
+	opacity: 1;
+	width: 50px;
+}
+
+.wrapper {
+	/* position: relative; */
+	width: calc(100vw-20px);
+	display: flex;
+	transition: .3s;
+}
+
+.memo {
+	/* position: relative; */
+	width: calc(100vw-20px);
+	display: flex;
+	transition: .3s;
+}
+
+.wrapper .box {
+	display: none;
+	/* width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.memos .memo {
+	display: none;
+}
+
+/* .wrapper .box:nth-child(1) {
+	background: rgb(122, 237, 145);
+}
+
+.wrapper .box:nth-child(2) {
+	background: rgb(83, 186, 234);
+}
+
+.wrapper .box:nth-child(3) {
+	background: rgb(50, 118, 243);
+}
+
+.wrapper .box:nth-child(4) {
+	background: rgb(212, 76, 240);
+} */
+
+.switch input:nth-child(1):checked~.wrapper .box:nth-child(1) {
+	width: 100vw;
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch input:nth-child(2):checked~.wrapper .box:nth-child(2) {
+	width: 100vw;
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch input:nth-child(3):checked~.wrapper .box:nth-child(3) {
+	width: 100vw;
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch input:nth-child(4):checked~.wrapper .box:nth-child(4) {
+	width: 100vw;
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch input:nth-child(1):checked~.memos .memo:nth-child(1) {
+	width: 100vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.switch input:nth-child(2):checked~.memos .memo:nth-child(2) {
+	width: 100vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.switch input:nth-child(3):checked~.memos .memo:nth-child(3) {
+	width: 100vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.switch input:nth-child(4):checked~.memos .memo:nth-child(4) {
+	width: 100vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.memos .memo .citation {
+	font-family: "Georgia", sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 110%;
+	letter-spacing: 0.06em;
+	color: blue;
+}
+
+/* .switch input:nth-child(2):checked~.wrapper {
+	left: -100vw;
+}
+
+.switch input:nth-child(3):checked~.wrapper {
+	left: -200vw; */
+/* } */
