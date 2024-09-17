@@ -74,11 +74,11 @@ html {
 	justify-content: end;
 	align-items: center;
 	gap: 0.8rem;
-	z-index: 100;
+	/* z-index: 100; */
 
-	@media (width <=700px) {
+	/* @media (width <=700px) {
 		justify-content: center;
-	}
+	} */
 }
 
 .controls label {
@@ -98,10 +98,10 @@ label:hover {
 	opacity: 0.4; */
 }
 
-.switch input:nth-child(1):checked~.controls label:nth-child(1),
-.switch input:nth-child(2):checked~.controls label:nth-child(2),
-.switch input:nth-child(3):checked~.controls label:nth-child(3),
-.switch input:nth-child(4):checked~.controls label:nth-child(4) {
+.switch input:nth-child(1):checked~.underpicture .controls label:nth-child(1),
+.switch input:nth-child(2):checked~.underpicture .controls label:nth-child(2),
+.switch input:nth-child(3):checked~.underpicture .controls label:nth-child(3),
+.switch input:nth-child(4):checked~.underpicture .controls label:nth-child(4) {
 	opacity: 1;
 	width: 3.125rem;
 }
@@ -113,18 +113,22 @@ label:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: .3s;
+	transition: 5s;
 }
 
 .memo {
 	/* position: relative; */
 	max-width: 100%;
 	display: flex;
-	transition: .3s;
+	transition: 5s;
 }
 
 .wrapper .box {
-	display: none;
+	/* display: none; */
+	visibility: hidden;
+	opacity: 0;
+	max-width: 0;
+	transition: all 1s linear;
 	/* width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -132,8 +136,22 @@ label:hover {
 	align-items: center; */
 }
 
+.underpicture {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media (width <=700px) {
+		flex-direction: column-reverse;
+	}
+}
+
 .memos .memo {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	transition: all .5s ease;
+	/* display: none; */
 }
 
 img {
@@ -162,6 +180,9 @@ img {
 } */
 
 .switch input:nth-child(1):checked~.wrapper .box:nth-child(1) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
@@ -172,6 +193,10 @@ img {
 }
 
 .switch input:nth-child(2):checked~.wrapper .box:nth-child(2) {
+
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
@@ -182,6 +207,9 @@ img {
 }
 
 .switch input:nth-child(3):checked~.wrapper .box:nth-child(3) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
@@ -192,6 +220,9 @@ img {
 }
 
 .switch input:nth-child(4):checked~.wrapper .box:nth-child(4) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	max-width: 100%;
 	/* width: calc(100vw-40px); */
 	/* height: 100vh; */
@@ -201,28 +232,42 @@ img {
 	align-items: center;
 }
 
-.switch input:nth-child(1):checked~.memos .memo:nth-child(1) {
+/* checked~.wrapper .box:  */
+.switch input:nth-child(1):checked~.underpicture .memos .memo:nth-child(1) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
+	max-height: 1000px;
 	width: calc(100vw-2.5rem);
 	display: flex;
 	justify-content: left;
 	align-items: center;
 }
 
-.switch input:nth-child(2):checked~.memos .memo:nth-child(2) {
+.switch input:nth-child(2):checked~.underpicture .memos .memo:nth-child(2) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	width: calc(100vw-2.5rem);
 	display: flex;
 	justify-content: left;
 	align-items: center;
 }
 
-.switch input:nth-child(3):checked~.memos .memo:nth-child(3) {
+.switch input:nth-child(3):checked~.underpicture .memos .memo:nth-child(3) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	width: calc(100vw-2.5rem);
 	display: flex;
 	justify-content: left;
 	align-items: center;
 }
 
-.switch input:nth-child(4):checked~.memos .memo:nth-child(4) {
+.switch input:nth-child(4):checked~.underpicture .memos .memo:nth-child(4) {
+	transition: all .5s ease;
+	visibility: visible;
+	opacity: 1;
 	width: calc(100vw-2.5rem);
 	display: flex;
 	justify-content: left;
@@ -232,7 +277,7 @@ img {
 .memos .memo .citation {
 	font-family: "Georgia", sans-serif;
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 110%;
 	letter-spacing: 0.06em;
 	color: blue;
